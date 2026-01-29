@@ -12,3 +12,7 @@ My goals for this data:
 
 WEEKLY LOG
 follow this template: Each week, you will update this log by describing the type of investigations you might do with your data, and how you will break them up into different components (e.g. I will do xx analysis, and then I will make xx figure..), and you will always include: (1) what data file you used (2) what you called your R script.
+
+###############################################Week 1###############################
+1. I uploaded the data file for fruit quality
+2. I did some data wrangling (did some calculations and cleaning) to know the type of dataset I have before proper analysis
