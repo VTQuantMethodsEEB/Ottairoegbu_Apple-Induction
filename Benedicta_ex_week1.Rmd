@@ -1,0 +1,123 @@
+---
+title: "Benedicta_ex_week1"
+author: "Benedicta Ottairoegbu"
+date: "2026-01-28"
+output: html_document
+---
+My Data
+This data shows the effect of Prohydrojasmonic acid (PDJ) on the weight, firmness, sugar content and color of four varieties of apple. we have 40 observations (10 randomly selected apples times 4 varieties of apples) and 7 variables (sample id, treatment which is further divided into control and PDJ, weight (kg), firmness (N), sugar (Brix), and color).
+My goals for this data:
+1. find the right model to analyse the data
+2. Proper interpretation of the output
+3. good graphical presentation of the plots 
+4. result interpretation for the wider audience
+
+
+packages
+```{r}
+rm(list=ls())
+library(tidyverse)
+```
+
+reading the data into R
+```{r}
+fruit=read.csv("Fruit quality.csv")
+```
+
+viewing the data
+```{r}
+View(fruit)
+```
+
+exploring the structure
+```{r}
+str(fruit) #sampleid, variety and treatment are in characters, instead of factors, will change them.
+fruit$sampleid=as.factor(fruit$sampleid)
+fruit$variety=as.factor(fruit$variety)
+fruit$treatment=as.factor(fruit$treatment)
+str(fruit)
+```
+
+checking dimensions and what it means 
+```{r}
+dim(fruit)
+```
+
+selecting a column using sqaure brackets and logical statments
+```{r}
+fruit[fruit$weight>0.1& fruit$treatment=="PDJ",]
+fruit[fruit$treatment=="PDJ",]
+```
+
+checking the summary 
+```{r}
+summary(fruit) #this shows the minimum, maximum, median. mean and quartiles including if i have missing values in my dataset
+#doing a calculation to add a column to the dataset
+```
+
+
+Calculations with the data 
+
+```{r}
+fruit$weight_log=log(fruit$weight)
+fruit
+#removing NAs
+fruit=na.omit(fruit)
+#adding 2 to the values in sugar column
+fruit$sugar=2+fruit$sugar
+fruit
+```
+
+using base R to aggregate data 
+
+```{r}
+aggregate(weight~treatment*variety, FUN=sum, data=fruit)
+aggregate(cbind(weight,color)~treatment+variety, FUN=mean, data=fruit)
+aggregate(weight~treatment+variety, FUN=sum, data=fruit)
+aggregate(weight~treatment+variety, FUN=mean, data=fruit)
+```
+
+using tidyverse and piping 
+```{r}
+fruit%>%
+group_by(treatment)%>%
+summarise(mean=mean(weight), n=n())
+
+fruit%>%
+group_by(treatment, variety)%>%
+summarise(mean=mean(weight), n=n())
+
+fruit %>%
+group_by(treatment,variety)%>%
+summarise(mean=mean(weight), sum=sum(weight), n=n())
+
+fruit%>%
+group_by(treatment, variety)%>%
+summarise(
+mean_weight=mean(weight),
+mean_color=mean(color),
+sum_color=sum(color),
+sum_weight=sum(weight),
+n=n()
+)
+
+fruit%>%
+filter(firmness>7) #selecting values of firmness greater than 7
+
+fruit%>%
+filter(sugar>8)
+
+fruit%>%
+filter(treatment=="PDJ")
+
+fruit%>%
+filter(treatment=="control") #selecting all PDJ treatment
+
+fruit%>%
+filter(treatment=="C") #selecting all PDJ treatment
+
+fruit%>%
+filter(treatment=="C", sugar> 8) #selecting all control treatment
+
+```
+
