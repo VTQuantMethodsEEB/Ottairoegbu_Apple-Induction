@@ -16,3 +16,10 @@ follow this template: Each week, you will update this log by describing the type
 ###############################################Week 1###############################
 1. I uploaded the data file for fruit quality
 2. I did some data wrangling (did some calculations and cleaning) to know the type of dataset I have before proper analysis
+
+
+######################################### Week 2###################################
+1. I created a new script for the tidyverse exercise 
+2. I used tidyverse code on my data
+3. I used group_by, mutate and summarise on my data and was able to tell the difference between the three commands.
+4. I left_joined two dataframes I created from my original data and pivoted it to a long format.
