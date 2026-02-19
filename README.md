@@ -19,7 +19,17 @@ follow this template: Each week, you will update this log by describing the type
 
 
 ######################################### Week 2###################################
-1. I created a new script for the tidyverse exercise 
+1. Code: Benedicta_ex_week 2.R 
+Data: Fruit quality.csv
 2. I used tidyverse code on my data
 3. I used group_by, mutate and summarise on my data and was able to tell the difference between the three commands.
 4. I left_joined two dataframes I created from my original data and pivoted it to a long format.
+
+########################Week 3####################################
+Code: Benedicta_ex_week 3.R
+Data= Fruit quality.csv
+I plotted two graphs using ggplot2 and other packages for this assignment to see how PDJ affect the weight and color of apple cultivars in comparison to the control
+the response variables are weight and color (y), with variety as x and PDJ as the z which was used as the color scheme here. 
+this was done to see if there is any interaction between PDJ and variety in the response variables tested. 
+
+
