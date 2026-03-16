@@ -33,3 +33,11 @@ the response variables are weight and color (y), with variety as x and PDJ as th
 this was done to see if there is any interaction between PDJ and variety in the response variables tested. 
 
 
+
+##################################Week 5 ##########################################
+1. Code: Benedicta_ex_Week 5.R
+Data= Fruit quality.csv
+2. I formulated two hypotheses using permuation test and the shapiro wilk test
+3. For the permutation test, I check if the mean of color across the two treatments (PDJ and Control) are equal
+4. Using the shapiro wilk test, I was able to confirm the distribution of my response variables
+
