@@ -41,3 +41,20 @@ Data= Fruit quality.csv
 3. For the permutation test, I check if the mean of color across the two treatments (PDJ and Control) are equal
 4. Using the shapiro wilk test, I was able to confirm the distribution of my response variables
 
+
+
+######################################## Week 7 ####################################
+1. Code= Benedicta_ex_Week 7.R
+Data=Fruit quality.csv
+2. I used the linear model (lm) and answered one of the hypothesis to see if PDJ increases the weight of Apple
+3. To do this, I used the lm function having weight as a function of treatment.
+went ahead to do some model diagnostic testing tools using the plot() and the check_model() from the performance package
+4. I also used the shapiro-wilk test which confirms normality and the hist()
+
+
+########################### Week 8_continuation from exercise 7 ########################
+1. Code=Benedicta_ex_Week 7.R
+2. Data=Fruit quality.csv
+3. I used the linear model to answer if the weight of apples is affected by the interaction between PDJ and variety
+4. To do this, I used the lm function having weight as a function of the interaction between treatment and variety (treatment*variety) and the additive effect (treatment+variety)
+5. However, I had a bit of issue with interpreting the combined model, i wasn't sure if I was doing something right there. 
