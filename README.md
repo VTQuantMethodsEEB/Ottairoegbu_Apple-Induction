@@ -58,3 +58,10 @@ went ahead to do some model diagnostic testing tools using the plot() and the ch
 3. I used the linear model to answer if the weight of apples is affected by the interaction between PDJ and variety
 4. To do this, I used the lm function having weight as a function of the interaction between treatment and variety (treatment*variety) and the additive effect (treatment+variety)
 5. However, I had a bit of issue with interpreting the combined model, i wasn't sure if I was doing something right there. 
+
+
+##########################Week 10 and 11##########################
+1. Code: Benedicta_ex_week 10 glm.R
+2. Data=Fruit quality.csv
+3. for week 10, I use GLM on my data, then used predict and ovrlaid it with the model predictions (but I am not sure if the output is making any sense visually, helpppp!!!)
+4. for week 11, I compared four models using the response variable weight. I did this using Likelihood Ratio Test and AIC which supports that the model is better fitted without includng interaction between treatment and variety. 
