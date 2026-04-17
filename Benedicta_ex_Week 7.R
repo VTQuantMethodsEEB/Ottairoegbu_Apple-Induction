@@ -95,8 +95,8 @@ ggplot(wt,aes(x=variety,y=weight,colour=treatment))+
 
 ###ADD RAW data to plot###
 ggplot(wt,aes(x=variety,y=weight,colour=treatment))+
-  geom_point(data=fruit, aes(x=variety, y=weight, color=treatment))+
   geom_point(color="red")+
+  geom_jitter(data=fruit, aes(x=variety, y=weight, color=treatment))+
   geom_line(aes(group=treatment))
   # I feel I am doing something wrong here, as the predicted model alone and the combined model look alike. now with the red point, is this saying my predicted model is saying the same thing with my raw data?
 
@@ -132,8 +132,8 @@ ggplot(wt1,aes(x=variety,y=weight,colour=treatment))+
 
 ###ADD RAW data to plot###
 ggplot(data=fruit, aes(x=variety, y=weight, color=treatment))+
-  geom_point(data=wt1,aes(x=variety,y=weight,colour=treatment))+
-  geom_point(color="red")+
+  geom_point(data=wt1,aes(x=variety,y=weight), color="red")+
+  geom_jitter()+
   geom_line(aes(group=treatment)) #same issue here as the first one
 
   
