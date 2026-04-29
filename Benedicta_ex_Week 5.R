@@ -11,7 +11,8 @@ set.seed(123)
 res <- NA ## set aside space for results
 color.pdj = fruit$color[fruit$treatment=="PDJ"] #creating the list for the values of color in pdj treatment
 color.c = fruit$color[fruit$treatment=="C"] #creating the list for the values of color in control treatment
-mean(color.pdj)-mean(color.c) #finding the mean difference the mean difference is 1.106228
+mean(color.c)-mean(color.pdj) #finding the mean difference the mean difference is 1.106228
+#ideally you would reverse these for your observed diff
 
 comb_cp = c(color.c,color.pdj) #combining the two 
 comb_cp
@@ -29,12 +30,12 @@ for (i in 1:1000) { # let i take the value to 1000
   #fieldboot <- colonyboot[(length(ants$place[ants$place=="forest"])+1):length(ants$place)] #this says assign the rest of the observations to field
   
   ## compute & store difference in means
-  res[i] <- mean(color.pdj)-mean(color.c) #calculate the difference in the color.c means and the color.pdj means
+  res[i] <- mean(color.c)-mean(color.pdj) #calculate the difference in the color.c means and the color.pdj means
   #[i] says "where i", and i is a counter, after running this loop, i should be 1000
 }
 
 print(res)
-obs <- mean(color.pdj)-mean(color.c)
+obs <- mean(color.c)-mean(color.pdj)
 obs
 
 #checking the p value 
