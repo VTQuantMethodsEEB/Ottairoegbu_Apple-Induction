@@ -65,3 +65,10 @@ went ahead to do some model diagnostic testing tools using the plot() and the ch
 2. Data=Fruit quality.csv
 3. for week 10, I use GLM on my data, then used predict and ovrlaid it with the model predictions (but I am not sure if the output is making any sense visually, helpppp!!!)
 4. for week 11, I compared four models using the response variable weight. I did this using Likelihood Ratio Test and AIC which supports that the model is better fitted without includng interaction between treatment and variety. 
+
+
+#############################Week 12###########################
+1. Benedicta_ex_week 12 mixed models.R
+2. Data=Fruit quality.csv
+3. Here, I used one of my hypothesis and tested it using glmmTMB package in R. 
+4. I used the Gaussian and Gamma distribution to know which one fits my model and went ahead to use AIC to select the best model which wasn't clear, as their difference was less than 2. I went ahead to use disgnostic in DHarMa to know which model fits best. 
