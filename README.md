@@ -67,7 +67,7 @@ went ahead to do some model diagnostic testing tools using the plot() and the ch
 4. for week 11, I compared four models using the response variable weight. I did this using Likelihood Ratio Test and AIC which supports that the model is better fitted without includng interaction between treatment and variety. 
 
 
-#############################Week 12###########################
+#############################Week 12############################
 1. Benedicta_ex_week 12 mixed models.R
 2. Data=Fruit quality.csv
 3. Here, I used one of my hypothesis and tested it using glmmTMB package in R. 

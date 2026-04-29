@@ -74,4 +74,5 @@ p=ggplot(data=fmd2, aes(x=variety,y=col,col=treatment))+
         legend.position=c(.9,.55),
         legend.text = element_text(size=12,face="italic"))
 print(p)
-# variety effect here is very high with delicious having high red coloration followed by empire, coertland and jonagold. treatment effect is smaller but visible.
+
+# variety effect here is very high with delicious having high red coloration followed by empire, cortland and jonagold. treatment effect is smaller but visible.
