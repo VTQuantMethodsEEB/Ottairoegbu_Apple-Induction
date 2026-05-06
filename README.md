@@ -72,3 +72,12 @@ went ahead to do some model diagnostic testing tools using the plot() and the ch
 2. Data=Fruit quality.csv
 3. Here, I used one of my hypothesis and tested it using glmmTMB package in R. 
 4. I used the Gaussian and Gamma distribution to know which one fits my model and went ahead to use AIC to select the best model which wasn't clear, as their difference was less than 2. I went ahead to use disgnostic in DHarMa to know which model fits best. 
+
+
+################################# Final Project#######################
+1. Benedicta_Final Project Code. R
+2. Data=Fruit quality.csv
+3. Here, I used the glmmTMB package to answer the questions of PDJ impact on weight, color, firmness and sugar content of apples across four cultivars. 
+4. I did the predicted model plots as taught in class and also plotted a main plot with just the raw data
+5. I used Gamma and Gaussian distribution where needed.
+
